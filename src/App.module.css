@@ -1,0 +1,163 @@
+.container {
+  --padding-inline: 1.25rem;
+  max-width: calc(2 * var(--padding-inline) + 46rem);
+  padding-inline: var(--padding-inline);
+  margin: 0 auto;
+}
+
+.tasksForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -1.75rem;
+}
+
+.tasksForm input {
+  flex: 1;
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem;
+
+  outline: 0;
+}
+
+.tasksForm input:focus {
+  border-color: var(--purple-dark);
+}
+
+.tasksForm input::placeholder {
+  color: var(--gray-300);
+}
+
+.tasksForm button {
+  background-color: var(--blue-dark);
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+  
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  transition: background-color 0.25s;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+}
+
+.tasksForm button:hover {
+  background-color: var(--blue);
+}
+
+.tasks {
+  margin-top: 4rem;
+}
+
+.tasksInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tasksCreated,
+.tasksDone {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.tasksCreated {
+  color: var(--blue);
+}
+
+.tasksDone {
+  color: var(--purple);
+}
+
+.tasksInfoCounter {
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.tasksEmpty {
+  color: var(--gray-300);
+  text-align: center;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.tasksEmpty img {
+  margin-bottom: 1rem;
+}
+
+.tasksEmpty p:first-of-type {
+  font-weight: 700;
+}
+
+.tasksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tasksList__task {
+  background-color: var(--gray-500);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+
+  border-radius: 8px;
+}
+
+.tasksList__task input[type='checkbox'] {
+  flex-shrink: 0;
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.tasksList__task input[type='checkbox']:checked {
+  border-color: var(--purple-dark);
+  background: var(--purple-dark) url("./assets/icon-checkmark.svg") no-repeat center center;
+}
+
+.tasksList__task input[type='checkbox']:checked + p {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.tasksList__task p {
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+.tasksList__task button {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--gray-300);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tasksList__task button:hover {
+  color: var(--danger);
+}
